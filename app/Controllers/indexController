@@ -1,0 +1,4 @@
+function IndexController($scope, $rootScope){
+$rootScope.loginStatus = false;
+}
+myApp.controller('IndexController', IndexController);

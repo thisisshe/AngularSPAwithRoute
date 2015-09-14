@@ -1,0 +1,24 @@
+<div>
+
+    <form>
+        <h3>Customer Form</h3>
+    </form>
+
+    <div id="grid">
+        <table>
+            <tr>
+                <th>CustomerId</th>
+                <th>CustomerName</th>
+                <th>City</th>
+                <th>State</th>
+            </tr>
+            <tr data-ng-repeat="cust in customers">
+
+                <td>{{cust.CustomerId}}</td>
+                <td>{{cust.CustomerName}}</td>
+                <td>{{cust.City}}</td>
+                <td>{{cust.State}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

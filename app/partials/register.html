@@ -1,0 +1,32 @@
+<section >
+    <form  role="form">
+        <fieldset>
+            <legend>Please Register:</legend>
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control"   data-ng-model="selectedUser.username" placeholder="Please enter your name "/> <br />
+            </div>
+
+            <div >
+                <label>Password</label>
+                <input type="text" class="form-control" data-ng-model="selectedUser.password" placeholder="Please enter your password " /> <br />
+            </div>
+
+            <div >
+                <label>Email</label>
+                <input type="text" class="form-control" data-ng-model="selectedUser.email" placeholder="Please enter your password " /> <br />
+            </div>
+
+            <div >
+                <label>Mobile</label>
+                <input type="text" class="form-control" data-ng-model="selectedUser.mobile" placeholder="Please enter your password " /> <br />
+            </div>
+
+            <div >
+                <button type="button" data-ng-click="addUser()" class="btn btn-danger">Register</button>
+                <p>If you have an account already , please <a href="#/Login"> log in</a> here</p>
+            </div>
+
+        </fieldset>
+    </form>
+</section>

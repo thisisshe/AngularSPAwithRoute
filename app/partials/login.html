@@ -1,0 +1,23 @@
+<section>
+    <form class="form-signin">
+
+        <fieldset>
+            <legend>Please Log in:</legend>
+            <div >
+                <label>Name</label>
+                <input type="text" data-ng-model="username" placeholder="Please enter your name "/> <br />
+            </div>
+
+            <div >
+                <label>Password</label>
+                <input type="password" data-ng-model="password" placeholder="Please enter your password " /> <br />
+            </div>
+
+            <div >
+                <button type="button" data-ng-click="loginUser()" class="btn btn-primary">Login</button>
+                <p>If do not have an account , please <a  href="#/register">register</a> here</p>
+            </div>
+
+        </fieldset>
+    </form>
+</section>

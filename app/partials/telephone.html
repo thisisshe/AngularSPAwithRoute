@@ -1,0 +1,49 @@
+<div>
+<a href="#/newContact">add new contact </a>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+        </tr>
+
+        <tr ng-repeat="contact in contacts" ng-include="getTemplate(contact)">
+        </tr>
+    </table>
+
+    <script type="text/ng-template" id="display">
+
+            <td ng-repeat="detail in contact.details" ng-model="id">
+                {{detail.contactid}}
+
+            </td>
+
+            <td ng-repeat="detail in contact.details">
+                {{detail.name}}
+            </td>
+            <td ng-repeat="detail in contact.details">
+                {{detail.email}}
+            </td>
+            <td ng-repeat="detail in contact.details">
+                {{detail.mobile}}
+            </td>
+            <td ng-repeat="detail in contact.details" ><button type="button" data-ng-click="editContact(detail.contactid, contact) " >Edit</button>
+                <button type="button" data-ng-click="isDelete(detail)">Delete</button>
+            </td>
+
+    </script>
+
+    <script type="text/ng-template" id="edit">
+        <td><input type="text" disabled="disabled" ng-model="selected.contactid"/>   </td>
+        <td><input type="text" ng-model="selected.name"/>   </td>
+        <td><input type="text" ng-model="selected.email"/>   </td>
+        <td><input type="text" ng-model="selected.mobile"/>   </td>
+
+        <td>
+            <button ng-click="saveContact(selected.contactid)">save</button>
+            <button ng-click="reset()">cancel</button>
+        </td>
+    </script>
+
+</div>
